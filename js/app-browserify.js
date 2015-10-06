@@ -18,7 +18,11 @@ let React = require('react'),
     // start app
     // new Router()
 // }
+window.onload = function() {
+	var audio = new Audio('timeWarp.wav')
 
+	audio.play()
+}
 
 var ClockComponent = React.createClass({
 
