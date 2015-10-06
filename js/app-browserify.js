@@ -25,7 +25,8 @@ var ClockComponent = React.createClass({
 	getInitialState: function(){
 		 return {
 		 	year:2015,
-		 	ticking: false
+		 	ticking: false,
+		 	direction: ''
 		 }
 	},
 
@@ -82,7 +83,8 @@ var ClockComponent = React.createClass({
 	},
 
 	stopTime: function(){
-		if (this.state.direction === 'back') this.stopBackwardTime()
+		if (this.state.direction === '') return
+		else if (this.state.direction === 'back') this.stopBackwardTime()
 		else this.stopForwardTime()
 	},
 
